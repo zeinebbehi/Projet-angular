@@ -1,0 +1,66 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<title>Login</title>
+
+	<!-- Meta tags -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<!-- Style -->
+	
+</head>
+
+<body>
+	<!-- login form -->
+	<section class="w3l-login">
+		<div>
+			<div class="wrapper">
+				<div class="logo">
+					<a class="brand-logo" href="index.html"> </a>
+				</div><br> <br> <br> <br> <br> <br>
+				<div class="form-section">
+					<h3>Login</h3>
+					<h6>To continue with Us</h6>
+					<form [formGroup]="loginForm" method="post"  (ngSubmit) ="loginUser()" class="signin-form">
+						<div class="form-input">
+							<input type="text"  placeholder="Username" required="" autofocus formControlName="email">
+							<small 
+							*ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid"
+							   class="text-danger">email is required </small>
+						</div>
+						<div class="form-input">
+							<input type="password"  placeholder="Password" required="" formControlName="password">
+							<small 
+							*ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid"
+							   class="text-danger">password is required </small>
+						</div>
+						<label class="check-remaind">
+				
+						</label>
+						<button type="submit" class="btn btn-primary " [disabled]="loginForm.invalid">Login In</button>
+						
+					</form>
+					<p class="signup">Don’t have account yet? <a routerLink="/register" class="signuplink">Sign Up</a></p>
+				</div>
+			</div>
+		</div>
+		<div id='stars'></div>
+		<div id='stars2'></div>
+		<div id='stars3'></div>
+
+		<!-- copyright -->
+		
+		<!-- //copyright -->
+	</section>
+
+	<!-- /login form -->
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!--
+=========================================================
+Material Dashboard - v2.1.2
+=========================================================
+
+Product Page: https://www.creative-tim.com/product/material-dashboard
+Copyright 2020 Creative Tim (https://www.creative-tim.com)
+Coded by Creative Tim
+
+=========================================================
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    University
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+
+</head>
+
+<body class="">
+  <div class="wrapper ">
+    <app-sidebar></app-sidebar>
+    <div class="main-panel">
+      <!-- Navbar -->
+    <app-topbar></app-topbar>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+           
+            <div class="col-md-12">
+              <div class="card card-plain">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title mt-0"> Best University List</h4>
+                  <p class="card-category"> </p>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-hover">
+                      <thead class="">
+                        <th>
+                          ID
+                        </th>
+                        <th>
+                          Name
+                        </th>
+                        <th>
+                          Country
+                        </th>
+                        <th>
+                          City
+                        </th>
+                        <th>
+                          Price
+                        </th>
+                        <th>
+                          Picture
+                        </th>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor ="let university of universitiesList">
+                          <td>{{university.name}}</td>
+                          <td>{{university.country}}</td>
+                          <td>{{university.price}}</td>
+                          <td>{{university.description}}</td>
+                          <td>{{university.image}}</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            1
+                          </td>
+                          <td>
+                            
+                            IT Business School
+                          </td>
+                          <td>
+                            Tunisia
+                          </td>
+                          <td>
+                            Nabeul
+                          </td>
+                          <td>
+                            $180,738
+                          </td>
+                          <td>
+                            <img src="assets/images/111.jpg">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            2
+                          </td>
+                          <td>
+                            
+                            ESPRIT
+                          </td>
+                          <td>
+                            Tunisia
+                          </td>
+                          <td>
+                            Tunis
+                          </td>
+                          <td>
+                            $200,538
+                          </td>
+                          <td>
+                            <img src="assets/images/222.jpg">
+                          </td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="submit" routerLink ="/adduniv"class="btn btn-primary pull-right">Add University </button>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+ 
+
+</body>
+
+</html>
